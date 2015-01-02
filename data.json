@@ -8,9 +8,8 @@ layout: null
     "content": "{{ post.content | xml_escape }}",
     "date": "{{ post.date | date_to_rfc822 }}",
     "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
-    {% for cat in post.categories %}
-    "category": "{{ cat | xml_escape }}"
-    {% endfor %}
+    "category": [{% for cat in post.categories %}"{{ cat | xml_escape }}"{% endfor %}],
+    "tags": [{% for tag in post.tags %}"{{ tag | xml_escape }}"{% endfor %}]
   }
   {% endfor %}
 ]
