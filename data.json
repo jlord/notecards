@@ -1,0 +1,16 @@
+---
+layout: null
+---
+[
+  {% for post in site.posts limit:10 %}
+  {
+    "title": "{{ post.title | xml_escape }}",
+    "content": "{{ post.content | xml_escape }}",
+    "date": "{{ post.date | date_to_rfc822 }}",
+    "url": "{{ post.url | prepend: site.baseurl | prepend: site.url }}",
+    {% for cat in post.categories %}
+    "category": "{{ cat | xml_escape }}"
+    {% endfor %}
+  }
+  {% endfor %}
+]
