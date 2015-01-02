@@ -1,0 +1,16 @@
+---
+layout: card
+title:  Browser
+author: jlord
+date:   2015-01-01 16:49:17
+categories: card
+tags: client, client-side, request, response
+---
+A browser is an application that makes _requests_ to servers for website contents. When the server sends a _response_ the browser draws the elements and BOOM, what you see is a website.
+
+The term _modern browser_ refers to those which support more of the current web standards developed byt he W3C.
+
+A few browser options: Chrome, Safari, Firefox.
+
+Resources:
+[onesite.com](), [twosite.com]()
